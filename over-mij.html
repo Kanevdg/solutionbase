@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>html,body{background:#f4f4f4;}</style>
+	<title>Over mij | SolutionBase</title>
+	<meta name="description" content="Leer meer over SolutionBase. Persoonlijke samenwerking, korte lijnen en moderne websites die professioneel ogen en gewoon goed werken."/>
+	<link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico?v=2" />
+	<link rel="shortcut icon" href="../assets/icons/favicon.ico?v=2" />
+	<link rel="stylesheet" href="/styles/style.css" />
+	<script src="/scripts/script.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar flex items-center justify-between p-6">
+			<div class="flex justify-between items-center w-full">
+				<a href="index.html" class="logo font-['Kanit'] text-4xl">SOLUTIONBASE</a>
+				<button id="hamburger-menu" class="hamburger-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul id="nav-menu" class="nav-links flex space-x-8">
+					<li><a href="diensten.html">Diensten</a></li>
+					<li><a href="over-mij.html">Over mij</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main class="bg-slate-100 text-slate-800">
+		<section data-header-theme="dark" data-hero-glow class="relative overflow-hidden rounded-b-[2.5rem] bg-slate-950 text-slate-100 md:rounded-b-[6rem]">
+			<div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,_rgba(45,212,191,0.20),_transparent_40%),radial-gradient(circle_at_85%_12%,_rgba(59,130,246,0.22),_transparent_36%)]"></div>
+			<div class="relative mx-auto w-full max-w-6xl px-6 pb-24 pt-24 md:pb-32 md:pt-32">
+				<h1 class="mt-20 max-w-4xl text-4xl font-extrabold leading-tight text-white md:text-6xl">
+					Over mij
+				</h1>
+				<p class="mt-8 max-w-3xl text-base leading-7 text-slate-300 md:text-lg">
+					Van software development student naar eigen <br> webprojecten.
+				</p>
+				<div class="mt-8 flex flex-wrap gap-3" data-stagger>
+					<a href="contact.html" class="btn-arrow inline-flex items-center gap-2 rounded-full bg-teal-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-300">
+						Neem contact op <span class="btn-arr" aria-hidden="true">→</span>
+					</a>
+					<a href="diensten.html" class="btn-arrow inline-flex items-center gap-2 rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-300 hover:text-white">
+						Bekijk mijn diensten <span class="btn-arr" aria-hidden="true">→</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section data-header-theme="light" class="px-4 py-14 md:px-6 md:py-18">
+			<div class="reveal-block mx-auto grid w-full max-w-7xl gap-8 rounded-[2.2rem] border border-slate-200/90 bg-white/80 p-7 shadow-[0_16px_42px_rgba(15,23,42,0.08)] md:grid-cols-[0.9fr_1.1fr] md:items-center md:p-10">
+				<div class="order-2 md:order-1">
+                    <p class="text-sm font-semibold uppercase tracking-[0.15em] text-teal-700">Even voorstellen</p>
+					<h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-5xl">Wie zit er achter SolutionBase?</h2>
+					<div class="mt-8 space-y-4 text-slate-600 md:text-lg">
+						<p>Ik ben Kane van der Graaf en ik ben 19 jaar. Ik studeer hbo software development aan de HU in Utrecht en heb daarvoor mijn mbo software development diploma behaald.</p>
+						<p>Met SolutionBase combineer ik mijn technische kennis met mijn interesse in development en gebruiksvriendelijkheid. Ik vind het mooi om iets te bouwen dat er sterk uitziet en ook echt goed werkt.</p>
+						<p>Ik werk graag persoonlijk en direct. Daardoor blijft het contact duidelijk en weet je precies met wie je samenwerkt.</p>
+					</div>
+					<div class="mt-7">
+						<a href="https://www.linkedin.com/in/kanegraaf/" target="_blank" rel="noopener noreferrer" class="cta-pill cta-dark inline-flex items-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition">Bekijk LinkedIn</a>
+					</div>
+				</div>
+				<div class="order-1 md:order-2">
+					<div class="mx-auto w-full max-w-[21rem] overflow-hidden rounded-[2rem] shadow-[0_16px_42px_rgba(15,23,42,0.08)]">
+						<img src="/assets/images/kane.png" alt="Kane van der Graaf" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section data-header-theme="light" class="bg-[linear-gradient(180deg,_#f8fafc_0%,_#f1f5f9_100%)] px-4 py-14 md:px-6 md:py-18">
+			<div class="reveal-block mx-auto w-full max-w-7xl rounded-[2.2rem] border border-slate-200/90 bg-white/70 p-7 shadow-[0_16px_42px_rgba(15,23,42,0.08)] md:p-10">
+				<div>
+					<p class="text-sm font-semibold uppercase tracking-[0.15em] text-teal-700">Wat je van mij kunt verwachten</p>
+					<h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-5xl">Direct contact, duidelijke communicatie en een website die goed werkt.</h2>
+				</div>
+				<div class="mt-8 grid gap-5 md:grid-cols-3" data-stagger>
+					<article class="rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-sm">
+						<p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">01</p>
+						<h3 class="mt-3 text-xl font-bold text-slate-900">Persoonlijk contact</h3>
+						<p class="mt-3 text-sm leading-6 text-slate-600">Je hebt direct contact met mij tijdens het hele proces. Dat werkt snel en overzichtelijk.</p>
+					</article>
+					<article class="rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-sm">
+						<p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">02</p>
+						<h3 class="mt-3 text-xl font-bold text-slate-900">Technisch goed gebouwd</h3>
+						<p class="mt-3 text-sm leading-6 text-slate-600">Ik zorg dat je website niet alleen mooi is, maar ook snel en goed werkt.</p>
+					</article>
+					<article class="rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-sm">
+						<p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">03</p>
+						<h3 class="mt-3 text-xl font-bold text-slate-900">Goed resultaat</h3>
+						<p class="mt-3 text-sm leading-6 text-slate-600">Een website die professioneel oogt en jouw bedrijf goed laat overkomen.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section data-header-theme="light" class="px-4 pb-8 md:px-6 md:pb-10">
+			<div class="reveal-block mx-auto w-full max-w-7xl rounded-[2.2rem] border border-amber-200/80 bg-[linear-gradient(135deg,_#fff7ed_0%,_#ffffff_65%,_#eef2ff_100%)] p-7 shadow-[0_16px_42px_rgba(15,23,42,0.08)] md:p-10">
+				<div class="flex flex-wrap items-center justify-between gap-6">
+					<div class="max-w-3xl">
+						<p class="text-sm font-semibold uppercase tracking-[0.15em] text-amber-700">Samenwerken?</p>
+						<h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-4xl">Laten we samen iets moois neerzetten</h2>
+						<p class="mt-4 text-slate-600">Stuur gerust een bericht als je een idee hebt, een nieuwe website wilt laten maken of je huidige website wilt verbeteren.</p>
+					</div>
+					<a href="contact.html" class="cta-pill cta-dark inline-flex items-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition">Neem contact op</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer data-header-theme="light" class="relative mt-4 rounded-t-[2.5rem] bg-[linear-gradient(180deg,_#e2e8f0_0%,_#cbd5e1_100%)] text-slate-700 md:rounded-t-[3.5rem]">
+		<div class="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
+			<div>
+				<a href="index.html" class="font-['Kanit'] text-2xl font-semibold tracking-wide text-slate-900">SOLUTIONBASE</a>
+			</div>
+
+			<div>
+				<h3 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">Snelle links</h3>
+				<ul class="mt-4 space-y-2 text-sm">
+					<li><a href="diensten.html" class="transition hover:text-teal-700">Diensten</a></li>
+					<li><a href="over-mij.html" class="transition hover:text-teal-700">Over mij</a></li>
+					<li><a href="contact.html" class="transition hover:text-teal-700">Contact</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<h3 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">Contact</h3>
+				<ul class="mt-4 space-y-2 text-sm text-slate-600">
+					<li><a href="mailto:info@solutionbase.nl" class="transition hover:text-teal-700">info@solutionbase.nl</a></li>
+					<li><a href="tel:+31615445913" class="transition hover:text-teal-700">+31 6 15 44 59 13</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div>
+			<div class="mt-6 pb-8 text-center text-xs text-slate-500 opacity-50">
+				<p>&copy; 2026 | SolutionBase</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

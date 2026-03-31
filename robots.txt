@@ -1,0 +1,12 @@
+# SolutionBase robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# Sitemap location
+Sitemap: https://solutionbase.nl/sitemap.xml
+
+# Crawl delay (optional - adjust based on server capacity)
+# Crawl-delay: 1

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diensten | SolutionBase - Website op maat laten maken</title>
+    <meta name="description" content="Ontdek de diensten van SolutionBase. Website bouwer, onderhoudspakketten en meer voor jouw online groei."/>
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico?v=2" />
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico?v=2" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="/scripts/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar flex items-center justify-between p-6">
+            <div class="flex justify-between items-center w-full">
+                <a href="index.html" class="logo font-['Kanit'] text-4xl">SOLUTIONBASE</a>
+                <button id="hamburger-menu" class="hamburger-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-menu" class="nav-links flex space-x-8">
+                    <li><a href="diensten.html">Diensten</a></li>
+                    <li><a href="over-mij.html">Over mij</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-slate-100 text-slate-800">
+        <!-- HERO SECTION -->
+        <section data-header-theme="dark" data-hero-glow class="relative overflow-hidden rounded-b-[2.5rem] bg-slate-950 text-slate-100 md:rounded-b-[6rem]">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,_rgba(45,212,191,0.20),_transparent_40%),radial-gradient(circle_at_85%_12%,_rgba(59,130,246,0.22),_transparent_36%)]"></div>
+            <div class="relative mx-auto w-full max-w-6xl px-6 pb-24 pt-24 md:pb-32 md:pt-32">
+                <h1 class="mt-20 max-w-4xl text-4xl font-extrabold leading-tight text-white md:text-6xl">
+                    Diensten
+                </h1>
+                <p class="mt-8 max-w-3xl text-base leading-7 text-slate-300 md:text-lg">
+                    Ik maak websites en zorg dat ze goed blijven werken. Van eerste opzet tot onderhoud, alles wordt simpel en duidelijk geregeld.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-3" data-stagger>
+                    <a href="contact.html" class="btn-arrow inline-flex items-center gap-2 rounded-full bg-teal-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-300">
+                        Start jouw Project <span class="btn-arr" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN SERVICES SECTION -->
+        <section data-header-theme="light" class="px-4 py-14 md:px-6 md:py-18">
+            <div class="reveal-block mx-auto w-full max-w-7xl">
+                <div class="mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.15em] text-teal-700">Services</p>
+                    <h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-5xl">Wat ik voor je kan doen</h2>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-3" data-stagger>
+                    <!-- Service 1 -->
+                    <div class="service-card rounded-[2rem] border border-slate-200/90 bg-white/80 p-8 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition hover:shadow-[0_16px_42px_rgba(15,23,42,0.14)] hover:border-teal-200/60">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-teal-400 to-teal-600 text-2xl font-bold text-white">
+                            01
+                        </div>
+                        <h3 class="mb-3 text-2xl font-bold text-slate-900">Website op maat</h3>
+                        <p class="mb-4 text-slate-600">
+                            Ik maak een website die er goed uitziet en fijn werkt.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Werkt op mobiel en desktop</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Snel en overzichtelijk</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Helemaal afgestemd op wat jij nodig hebt</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card rounded-[2rem] border border-slate-200/90 bg-white/80 p-8 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition hover:shadow-[0_16px_42px_rgba(15,23,42,0.14)] hover:border-teal-200/60">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 text-2xl font-bold text-white">
+                            02
+                        </div>
+                        <h3 class="mb-3 text-2xl font-bold text-slate-900">Onderhoud & Support</h3>
+                        <p class="mb-4 text-slate-600">
+                            Als er iets aangepast moet worden, wordt dat snel voor je geregeld.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Kleine aanpassingen wanneer nodig</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Website blijft goed werken</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Direct contact als je iets nodig hebt</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card rounded-[2rem] border border-slate-200/90 bg-white/80 p-8 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition hover:shadow-[0_16px_42px_rgba(15,23,42,0.14)] hover:border-teal-200/60">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 text-2xl font-bold text-white">
+                            03
+                        </div>
+                        <h3 class="mb-3 text-2xl font-bold text-slate-900">Aanpassingen & verbeteren</h3>
+                        <p class="mb-4 text-slate-600">
+                            Kleine aanpassingen en verbeteringen om je website up-to-date en goed werkend te houden.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Tekst of foto's aanpassen</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Pagina's toevoegen</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-600 font-bold">✓</span>
+                                <span>Kleine verbeteringen doorvoeren</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="pakketten" data-header-theme="light" class="bg-[linear-gradient(180deg,_#f1f5f9_0%,_#ffffff_50%,_#f8fafc_100%)] px-4 py-14 md:px-6 md:py-18">
+            <div class="reveal-block mx-auto w-full max-w-7xl">
+                <div class="mb-12 text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.15em] text-teal-700">Pakketten</p>
+                    <h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-5xl">Kies het pakket dat bij jou past</h2>
+                    <p class="mt-4 text-slate-600">Transparante prijzen, geen verborgen kosten. Betaal alleen voor wat jij echt nodig hebt.</p>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-3" data-stagger>
+                    <!-- Basic Package -->
+                    <div class="pricing-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+                        <div class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-emerald-700 w-fit">Basic</div>
+                        <h3 class="mt-4 text-xl font-bold text-slate-900">Snel en professioneel online</h3>
+                        <div class="mt-6 mb-6">
+                            <p class="text-4xl font-extrabold text-slate-900">€300</p>
+                            <p class="mt-1 text-sm text-slate-600">eenmalig</p>
+                            <p class="mt-4 text-2xl font-bold text-slate-900">€9,99 <span class="text-base font-medium text-slate-600">/ maand</span></p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+                            <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">✓</span><span>1-5 pagina's website</span></li>
+                            <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">✓</span><span>Modern en mobiel vriendelijk design</span></li>
+                            <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">✓</span><span>Snelle laadtijd</span></li>
+                            <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">✓</span><span>Contactformulier</span></li>
+                            <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">✓</span><span>Hosting inbegrepen</span></li>
+                            <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">✓</span><span>Aanpassingen via mij</span></li>
+                        </ul>
+                        <p class="mb-6 rounded-xl bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700">Perfect voor kleine bedrijven / starters.</p>
+                        <a href="contact.html" class="cta-pill cta-dark w-full inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition">Kies Basic</a>
+                    </div>
+
+                    <!-- Plus Package (Featured) -->
+                    <div class="pricing-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+                        <div class="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-sky-700 w-fit">Plus</div>
+                        <h3 class="mt-4 text-xl font-bold text-slate-900">Een stap verder online</h3>
+                        <div class="mt-6 mb-6">
+                            <p class="text-4xl font-extrabold text text-slate-900">€600</p>
+                            <p class="mt-1 text-sm text-slate-600">eenmalig</p>
+                            <p class="mt-4 text-2xl font-bold text-slate-900">€19,99 <span class="text-base font-medium text-slate-600">/ maand</span></p>
+                        </div>
+                        <p class="mb-3 text-sm font-semibold text-slate-700">Alles van Basic +</p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+                            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold mt-0.5">✓</span><span>5-8 pagina's</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold mt-0.5">✓</span><span>Betere structuur en design</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold mt-0.5">✓</span><span>Basis SEO (vindbaar in Google)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold mt-0.5">✓</span><span>Snellere support</span></li>
+                        </ul>
+                        <p class="mb-6 rounded-xl bg-sky-50 px-4 py-3 text-sm font-medium text-slate-700">Perfect voor bedrijven die serieuzer online willen.</p>
+                        <a href="contact.html" class="cta-pill cta-dark w-full inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition">Kies Plus</a>
+                    </div>
+
+                    <!-- Pro Package -->
+                    <div class="pricing-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+                        <div class="inline-flex items-center rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-violet-700 w-fit">Pro</div>
+                        <h3 class="mt-4 text-xl font-bold text-slate-900">Volledige controle over je website</h3>
+                        <div class="mt-6 mb-6">
+                            <p class="text-4xl font-extrabold text-slate-900">€800 - €1200</p>
+                            <p class="mt-1 text-sm text-slate-600">eenmalig</p>
+                            <p class="mt-4 text-2xl font-bold text-slate-900">€30 - €50 <span class="text-base font-medium text-slate-600">/ maand</span></p>
+                        </div>
+                        <p class="mb-3 text-sm font-semibold text-slate-700">Alles van Plus +</p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+                            <li class="flex items-start gap-2"><span class="text-violet-600 font-bold mt-0.5">✓</span><span>Oneindig aantal pagina's</span></li>
+                            <li class="flex items-start gap-2"><span class="text-violet-600 font-bold mt-0.5">✓</span><span>CMS (zelf tekst en foto's aanpassen)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-violet-600 font-bold mt-0.5">✓</span><span>Blog en uitbreidbare content</span></li>
+                            <li class="flex items-start gap-2"><span class="text-violet-600 font-bold mt-0.5">✓</span><span>Meer flexibiliteit</span></li>
+                        </ul>
+                        <p class="mb-6 rounded-xl bg-violet-50 px-4 py-3 text-sm font-medium text-slate-700">Perfect voor bedrijven die controle willen.</p>
+                        <a href="contact.html" class="cta-pill cta-dark w-full inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition">Kies Pro</a>
+                    </div>
+                </div>
+
+                <div class="mt-12 rounded-[2rem] border border-slate-200/90 bg-white/80 p-8 text-center shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+                    <p class="text-slate-600">
+                        <span class="font-bold text-slate-900">In elk pakket:</span> Hosting inbegrepen • Persoonlijk contact • Snelle oplevering • Doorlopende ondersteuning
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section data-header-theme="light" class="px-4 py-14 md:px-6 md:py-18">
+            <div class="reveal-block mx-auto w-full max-w-7xl">
+                <div class="mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.15em] text-sky-700">Features</p>
+                    <h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-5xl">Waarom SolutionBase?</h2>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2" data-stagger>
+                    <div class="feature-item rounded-xl border border-slate-200 bg-white p-6 flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-teal-100 flex items-center justify-center text-xl">
+                            ⚡
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-2">Snelle en moderne websites</h3>
+                            <p class="text-sm text-slate-600">Jouw website laadt snel en werkt soepel op alle apparaten.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item rounded-xl border border-slate-200 bg-white p-6 flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-xl">
+                            🔒
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-2">Veilig en betrouwbaar</h3>
+                            <p class="text-sm text-slate-600">Je website draait stabiel en veilig met een betrouwbare hostingomgeving.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item rounded-xl border border-slate-200 bg-white p-6 flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center text-xl">
+                            📱
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-2">Perfect op mobiel</h3>
+                            <p class="text-sm text-slate-600">Je website ziet er goed uit op telefoon, tablet en desktop.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item rounded-xl border border-slate-200 bg-white p-6 flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-amber-100 flex items-center justify-center text-xl">
+                            🎨
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-2">Strak en professioneel design</h3>
+                            <p class="text-sm text-slate-600">Een moderne uitstraling die past bij jouw bedrijf en vertrouwen uitstraalt.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item rounded-xl border border-slate-200 bg-white p-6 flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center text-xl">
+                            💬
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-2">Persoonlijk contact</h3>
+                            <p class="text-sm text-slate-600">Je hebt direct contact met mij, snel en gemakkelijk.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item rounded-xl border border-slate-200 bg-white p-6 flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center text-xl">
+                            🔧
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-2">Onderhoud en ondersteuning</h3>
+                            <p class="text-sm text-slate-600">Ik help je met aanpassingen en zorg dat je website goed blijft werken.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section data-header-theme="dark" class="px-4 py-14 md:px-6 md:py-18">
+            <div class="reveal-block mx-auto w-full max-w-7xl rounded-[2.3rem] border border-slate-700/70 bg-gradient-to-r from-slate-900 via-slate-800 to-teal-900 p-8 shadow-[0_22px_52px_rgba(15,23,42,0.35)] md:p-12" data-sections-glow>
+                <div class="grid gap-8 md:grid-cols-[1.35fr_0.65fr] md:items-center">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-teal-200">Klaar om te starten?</p>
+                        <h2 class="mt-3 text-3xl font-extrabold text-white md:text-5xl">Laten we jouw website samen bouwen</h2>
+                        <p class="mt-4 max-w-2xl text-slate-200">Vertel me wat je in gedachten hebt, dan kijken we samen hoe we jouw website kunnen realiseren.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 md:justify-end">
+                        <a href="contact.html" class="cta-pill cta-teal inline-flex items-center rounded-full bg-teal-300 px-6 py-3 text-sm font-semibold text-slate-900 transition">Laten we Starten</a>
+                        <a href="index.html" class="cta-pill cta-outline-light inline-flex items-center rounded-full border border-slate-300/70 px-6 py-3 text-sm font-semibold text-white transition">Terug naar Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer data-header-theme="light" class="relative mt-4 rounded-t-[2.5rem] bg-[linear-gradient(180deg,_#e2e8f0_0%,_#cbd5e1_100%)] text-slate-700 md:rounded-t-[3.5rem]">
+        <div class="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
+            <div>
+                <a href="index.html" class="font-['Kanit'] text-2xl font-semibold tracking-wide text-slate-900">SOLUTIONBASE</a>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">Snelle links</h3>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li><a href="diensten.html" class="inline-block"><p class="transition hover:text-teal-700">Diensten</p></a></li>
+                    <li><a href="over-mij.html" class="inline-block"><p class="transition hover:text-teal-700">Over mij</p></a></li>
+                    <li><a href="contact.html" class="inline-block"><p class="transition hover:text-teal-700">Contact</p></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">Contact</h3>
+                <ul class="mt-4 space-y-2 text-sm text-slate-600">
+                    <li><a href="mailto:info@solutionbase.nl" class="inline-block"><p class="transition hover:text-teal-700">info@solutionbase.nl</p></a></li>
+                    <li><a href="tel:+31615445913" class="inline-block"><p class="transition hover:text-teal-700">+31 6 15 44 59 13</p></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="text-xs text-center text-slate-500 mt-6 pb-8 opacity-50">
+                <p>&copy; 2026 | SolutionBase</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+            .service-card {
+                transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.36s ease, border-color 0.36s ease;
+                transform: translateY(0);
+            }
+            
+            .service-card:hover {
+                transform: translateY(-6px);
+            }
+        }
+
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card a {
+            margin-top: auto;
+        }
+    </style>
+</body>
+</html>
