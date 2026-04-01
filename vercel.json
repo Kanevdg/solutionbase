@@ -1,3 +1,9 @@
 {
   "cleanUrls": true
 }
+
+{
+  "redirects": [
+    { "source": "/:path*", "destination": "/404", "statusCode": 302 }
+  ]
+}
