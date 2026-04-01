@@ -61,22 +61,25 @@
                         Vul hieronder je gegevens in, dan neem ik zo snel mogelijk contact met je op.
                     </p>
 
-					<form class="mt-8 grid gap-5" action="mailto:info@solutionbase.nl" method="post" enctype="text/plain">
+					<form class="mt-8 grid gap-5" action="https://formsubmit.co/info@solutionbase.nl" method="post">
+						<input type="hidden" name="_subject" value="Nieuw bericht via solutionbase.nl" />
+						<input type="hidden" name="_captcha" value="true" />
+						<input type="hidden" name="_template" value="table" />
 						<div class="grid gap-5 sm:grid-cols-2">
 							<label class="text-sm font-semibold text-slate-700" for="naam">Naam*
-								<input id="naam" name="Naam" type="text" required class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="Jouw naam" />
+								<input id="naam" name="Naam" type="text" autocomplete="name" required class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="Jouw naam" />
 							</label>
 							<label class="text-sm font-semibold text-slate-700" for="bedrijf">Bedrijfsnaam
-								<input id="bedrijf" name="Bedrijfsnaam" type="text" class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="Optioneel" />
+								<input id="bedrijf" name="Bedrijfsnaam" type="text" autocomplete="organization" class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="Optioneel" />
 							</label>
 						</div>
 
 						<div class="grid gap-5 sm:grid-cols-2">
 							<label class="text-sm font-semibold text-slate-700" for="email">E-mail*
-								<input id="email" name="E-mail" type="email" required class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="naam@bedrijf.nl" />
+								<input id="email" name="E-mail" type="email" autocomplete="email" required class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="naam@bedrijf.nl" />
 							</label>
 							<label class="text-sm font-semibold text-slate-700" for="telefoon">Telnr. (optioneel)
-								<input id="telefoon" name="Telefoonnummer" type="tel" class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="+31 6 ..." />
+								<input id="telefoon" name="Telefoonnummer" type="tel" autocomplete="tel" class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="+31 6 ..." />
 							</label>
 						</div>
 
