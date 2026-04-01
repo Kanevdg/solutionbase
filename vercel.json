@@ -1,9 +1,10 @@
 {
-  "cleanUrls": true
-}
-
-{
+  "cleanUrls": true,
   "redirects": [
-    { "source": "/:path*", "destination": "/404", "statusCode": 302 }
+    {
+      "source": "/:path*",
+      "destination": "/404",
+      "statusCode": 302
+    }
   ]
 }
