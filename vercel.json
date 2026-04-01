@@ -1,3 +1,15 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/404",
+      "destination": "/404.html",
+      "statusCode": 200
+    },
+    {
+      "source": "/:path((?!404$).*)",
+      "destination": "/404",
+      "statusCode": 302
+    }
+  ]
 }
