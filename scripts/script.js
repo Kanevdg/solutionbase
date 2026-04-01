@@ -280,189 +280,21 @@ if (revealBlocks.length > 0) {
 	}
 }
 
-// ===== SCROLL PROGRESS BAR =====
-const progressBar = document.createElement("div");
-progressBar.className = "scroll-progress-bar";
-document.body.appendChild(progressBar);
+const isLg = window.matchMedia("(min-width: 1024px)").matches;
 
-window.addEventListener("scroll", () => {
-	const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-	const scrolled = (window.scrollY / documentHeight) * 100;
-	progressBar.style.width = scrolled + "%";
-});
+if (isLg && !prefersReducedMotion) {
+	document.querySelectorAll("[data-word-reveal]").forEach((el) => {
+		const words = el.textContent.trim().split(/\s+/);
+		el.innerHTML = words
+			.map((word, i) => `<span class="word-reveal-word" style="--word-index-delay:${i * 55}ms">${word}</span>`)
+			.join(" ");
 
-// ===== MAGNETIC BUTTONS =====
-const magneticBtns = document.querySelectorAll(".magnetic-btn");
-if (!prefersReducedMotion) {
-	magneticBtns.forEach((btn) => {
-		btn.addEventListener("mousemove", function(e) {
-			const rect = this.getBoundingClientRect();
-			const x = e.clientX - rect.left - rect.width / 2;
-			const y = e.clientY - rect.top - rect.height / 2;
-			const distance = Math.sqrt(x * x + y * y);
-			
-			if (distance < 100) {
-				this.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-			}
-		});
-
-		btn.addEventListener("mouseleave", function() {
-			this.style.transform = "translate(0, 0)";
-		});
-	});
-}
-
-// ===== COUNTER ANIMATIONS =====
-function animateCounter(element, target, duration = 2000) {
-	let current = 0;
-	const increment = target / (duration / 16);
-	const counter = setInterval(() => {
-		current += increment;
-		if (current >= target) {
-			current = target;
-			clearInterval(counter);
-		}
-		element.textContent = Math.floor(current);
-	}, 16);
-}
-
-const counters = document.querySelectorAll(".counter");
-if (counters.length > 0) {
-	const counterObserver = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting && !entry.target.dataset.animated) {
-				const target = parseInt(entry.target.dataset.countTo) || 0;
-				animateCounter(entry.target, target);
-				entry.target.dataset.animated = "true";
-				counterObserver.unobserve(entry.target);
-			}
-		});
-	}, { threshold: 0.5 });
-
-	counters.forEach((counter) => counterObserver.observe(counter));
-}
-
-// ===== BEFORE/AFTER SLIDER =====
-const beforeAfterContainers = document.querySelectorAll(".before-after-container");
-beforeAfterContainers.forEach((container) => {
-	const resizer = container.querySelector(".before-after-resize");
-	const handle = container.querySelector(".before-after-handle");
-	if (!resizer || !handle) return;
-
-	let isActive = false;
-
-	const updatePosition = (e) => {
-		if (!isActive) return;
-		const rect = container.getBoundingClientRect();
-		let x = e.clientX - rect.left;
-		if (e.touches) x = e.touches[0].clientX - rect.left;
-
-		x = Math.max(0, Math.min(x, rect.width));
-		const percentage = (x / rect.width) * 100;
-
-		resizer.style.width = percentage + "%";
-		handle.style.left = percentage + "%";
-	};
-
-	handle.addEventListener("mousedown", () => { isActive = true; });
-	handle.addEventListener("touchstart", () => { isActive = true; });
-	document.addEventListener("mouseup", () => { isActive = false; });
-	document.addEventListener("touchend", () => { isActive = false; });
-	document.addEventListener("mousemove", updatePosition);
-	document.addEventListener("touchmove", updatePosition);
-});
-
-// ===== TESTIMONIAL CAROUSEL =====
-const testimonialSliders = document.querySelectorAll("[data-testimonial-slider]");
-testimonialSliders.forEach((slider) => {
-	const cards = slider.querySelectorAll(".testimonial-card");
-	const prevBtn = slider.querySelector("[data-testimonial-prev]");
-	const nextBtn = slider.querySelector("[data-testimonial-next]");
-	const dotsContainer = slider.querySelector("[data-testimonial-dots]");
-
-	if (cards.length === 0) return;
-
-	let index = 0;
-
-	const goTo = (newIndex) => {
-		const cardCount = cards.length;
-		index = (newIndex + cardCount) % cardCount;
-
-		cards.forEach((card, i) => {
-			card.classList.toggle("is-active", i === index);
-		});
-
-		if (dotsContainer) {
-			dotsContainer.querySelectorAll("button").forEach((dot, i) => {
-				dot.classList.toggle("is-active", i === index);
+		requestAnimationFrame(() => {
+			requestAnimationFrame(() => {
+				el.querySelectorAll(".word-reveal-word").forEach((span) => {
+					span.classList.add("is-visible");
+				});
 			});
-		}
-	};
-
-	if (dotsContainer) {
-		cards.forEach((_, i) => {
-			const dot = document.createElement("button");
-			dot.type = "button";
-			dot.className = "w-3 h-3 rounded-full border border-slate-300 transition";
-			dot.addEventListener("click", () => goTo(i));
-			if (i === 0) dot.classList.add("is-active");
-			dotsContainer.appendChild(dot);
-		});
-	}
-
-	if (prevBtn) prevBtn.addEventListener("click", () => goTo(index - 1));
-	if (nextBtn) nextBtn.addEventListener("click", () => goTo(index + 1));
-
-	goTo(0);
-});
-
-// ===== SKILL FILTER =====
-const skillTags = document.querySelectorAll(".skill-tag");
-const portfolioItems = document.querySelectorAll("[data-skills]");
-
-skillTags.forEach((tag) => {
-	tag.addEventListener("click", function() {
-		const skill = this.dataset.skill;
-		const isActive = this.classList.toggle("is-active");
-
-		const activeTags = Array.from(skillTags).filter((t) => t.classList.contains("is-active")).map((t) => t.dataset.skill);
-
-		portfolioItems.forEach((item) => {
-			const itemSkills = item.dataset.skills.split(",").map((s) => s.trim());
-			const matches = activeTags.length === 0 || activeTags.some((skill) => itemSkills.includes(skill));
-			item.style.display = matches ? "block" : "none";
-			if (matches) {
-				setTimeout(() => item.style.opacity = "1", 10);
-				item.style.transition = "opacity 0.3s ease";
-			} else {
-				item.style.opacity = "0";
-			}
 		});
 	});
-});
-
-// ===== STAGGERED TEXT REVEAL =====
-const heroTexts = document.querySelectorAll(".hero-text-reveal");
-heroTexts.forEach((textEl) => {
-	const text = textEl.textContent;
-	const words = text.split(" ");
-	textEl.innerHTML = words.map((word, i) => {
-		const delay = i * 0.1;
-		return `<span style="animation-delay: ${delay}s">${word}</span>`;
-	}).join(" ");
-});
-
-// ===== TIMELINE REVEALS =====
-const timelineItems = document.querySelectorAll(".timeline-item");
-if (timelineItems.length > 0) {
-	const timelineObserver = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add("is-visible");
-				timelineObserver.unobserve(entry.target);
-			}
-		});
-	}, { threshold: 0.5 });
-
-	timelineItems.forEach((item) => timelineObserver.observe(item));
 }
