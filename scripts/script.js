@@ -214,12 +214,14 @@ if (menuButton && navMenu) {
 	const closeMenu = () => {
 		menuButton.classList.remove("is-open");
 		navMenu.classList.remove("is-open");
+		document.body.classList.remove("menu-open");
 		menuButton.setAttribute("aria-expanded", "false");
 	};
 
 	const openMenu = () => {
 		menuButton.classList.add("is-open");
 		navMenu.classList.add("is-open");
+		document.body.classList.add("menu-open");
 		menuButton.setAttribute("aria-expanded", "true");
 	};
 
@@ -234,6 +236,12 @@ if (menuButton && navMenu) {
 
 	navMenu.querySelectorAll("a").forEach((link) => {
 		link.addEventListener("click", closeMenu);
+	});
+
+	window.addEventListener("keydown", (event) => {
+		if (event.key === "Escape") {
+			closeMenu();
+		}
 	});
 
 	window.addEventListener("resize", () => {
