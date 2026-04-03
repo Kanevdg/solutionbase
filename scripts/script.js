@@ -298,3 +298,82 @@ if (isLg && !prefersReducedMotion) {
 		});
 	});
 }
+
+const contactForm = document.querySelector("[data-contact-form]");
+
+if (contactForm) {
+	const submitButton = contactForm.querySelector("[data-submit-button]");
+	const feedbackEl = contactForm.querySelector("[data-form-feedback]");
+	const defaultButtonLabel = submitButton ? submitButton.textContent.trim() : "Verstuur";
+
+	const setFeedback = (state, message) => {
+		if (!feedbackEl) {
+			return;
+		}
+
+		feedbackEl.classList.remove("is-success", "is-error", "is-loading");
+
+		if (state) {
+			feedbackEl.classList.add(`is-${state}`);
+		}
+
+		feedbackEl.textContent = message || "";
+	};
+
+	contactForm.addEventListener("input", () => {
+		if (feedbackEl?.classList.contains("is-error")) {
+			setFeedback("", "");
+		}
+	});
+
+	contactForm.addEventListener("submit", async (event) => {
+		event.preventDefault();
+
+		if (!contactForm.checkValidity()) {
+			contactForm.reportValidity();
+			setFeedback("error", "Controleer je gegevens en vul de verplichte velden in.");
+			return;
+		}
+
+		if (submitButton) {
+			submitButton.disabled = true;
+			submitButton.classList.add("is-loading");
+			submitButton.textContent = "Versturen...";
+		}
+
+		contactForm.setAttribute("aria-busy", "true");
+		setFeedback("loading", "Bericht wordt verstuurd...");
+
+		try {
+			const formData = new FormData(contactForm);
+			const endpoint = contactForm.action.includes("/ajax/")
+				? contactForm.action
+				: contactForm.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+
+			const response = await fetch(endpoint, {
+				method: "POST",
+				body: formData,
+				headers: {
+					Accept: "application/json"
+				}
+			});
+
+			if (!response.ok) {
+				throw new Error("Form submit request failed");
+			}
+
+			setFeedback("success", "Bedankt! Je bericht is verstuurd. Ik neem snel contact met je op.");
+			contactForm.reset();
+		} catch (error) {
+			setFeedback("error", "Er ging iets mis met versturen. Probeer het opnieuw of mail direct naar info@solutionbase.nl.");
+		} finally {
+			contactForm.setAttribute("aria-busy", "false");
+
+			if (submitButton) {
+				submitButton.disabled = false;
+				submitButton.classList.remove("is-loading");
+				submitButton.textContent = defaultButtonLabel;
+			}
+		}
+	});
+}

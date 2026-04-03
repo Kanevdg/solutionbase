@@ -61,10 +61,11 @@
                         Vul hieronder je gegevens in, dan neem ik zo snel mogelijk contact met je op.
                     </p>
 
-					<form class="mt-8 grid gap-5" action="https://formsubmit.co/info@solutionbase.nl" method="post">
+					<form class="mt-8 grid gap-5" data-contact-form action="https://formsubmit.co/info@solutionbase.nl" method="post" novalidate>
 						<input type="hidden" name="_subject" value="Nieuw bericht via solutionbase.nl" />
-						<input type="hidden" name="_captcha" value="true" />
+						<input type="hidden" name="_captcha" value="false" />
 						<input type="hidden" name="_template" value="table" />
+						<input type="hidden" name="_next" value="" />
 						<div class="grid gap-5 sm:grid-cols-2">
 							<label class="text-sm font-semibold text-slate-700" for="naam">Naam*
 								<input id="naam" name="Naam" type="text" autocomplete="name" required class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200" placeholder="Jouw naam" />
@@ -88,9 +89,10 @@
 						</label>
 
 						<div class="flex flex-wrap items-center gap-3">
-							<button type="submit" class="cta-pill cta-dark inline-flex cursor-pointer items-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition">Verstuur</button>
+							<button type="submit" data-submit-button class="cta-pill cta-dark inline-flex cursor-pointer items-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition">Verstuur</button>
 							<a href="mailto:info@solutionbase.nl" class="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-500 hover:text-slate-900">Liever mailen</a>
 						</div>
+						<p data-form-feedback class="form-feedback" role="status" aria-live="polite"></p>
 					</form>
 				</div>
 
